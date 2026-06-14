@@ -13,7 +13,7 @@ const CONFIG = {
 
   // Roles que rota el efecto de escritura
   roles: [
-    "Security Engineer",
+    "Security Specialist",
     "Software Developer",
     "Penetration Tester",
     "ENS Consultant",
