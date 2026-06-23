@@ -38,7 +38,7 @@ const CONFIG = {
   // HERO — Estadísticas (las 4 tarjetas)
   stats: [
     { value: "4+",  label: "Formaciones completadas" },
-    { value: "3+",  label: "Máquinas HTB / DockerLabs" },
+    { value: "4+",  label: "Máquinas HTB / DockerLabs" },
     { value: "77%", label: "Progreso CPTS Academy" },
     { value: "∞",   label: "Ganas de aprender" },
   ],
