@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Víctor de Cabo — Especialista en Ciberseguridad y Desarrollador de Software. Security by Design."/>
+<title>Víctor de Cabo — Cybersecurity</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+<!-- Estilos -->
+<link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<header id="navbar">
+  <div class="nav-inner">
+    <!-- Logo (contenido inyectado por JS) -->
+    <a href="#hero" class="nav-logo"></a>
+
+    <!-- Desktop nav -->
+    <nav class="nav-links">
+      <a href="#about"    class="nav-link">Sobre mí</a>
+      <a href="#projects" class="nav-link">Proyectos</a>
+      <a href="#htb"      class="nav-link">HackTheBox</a>
+      <a href="#blog"     class="nav-link">Blog</a>
+      <a href="#contact"  class="nav-link">Contacto</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <a data-link="github"   target="_blank" rel="noopener" class="nav-icon-btn" title="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+      <a data-link="linkedin" target="_blank" rel="noopener" class="nav-icon-btn" title="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <div class="nav-sep"></div>
+      <a href="#contact" class="nav-cta">Contrátame</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="hamburger" aria-label="Abrir menú">
+      <svg id="ico-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="ico-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#htb">HackTheBox</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-bg-dot"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-badge">
+    <span class="pulse"></span>
+    Disponible para nuevas oportunidades
+  </div>
+
+  <h1 class="hero-name" id="hero-name"
+      style="opacity:0;transform:translateY(24px);transition:opacity .7s .1s ease,transform .7s .1s cubic-bezier(.22,1,.36,1)">
+  </h1>
+
+  <div class="hero-role" id="hero-role"
+       style="opacity:0;transform:translateY(20px);transition:opacity .7s .25s ease,transform .7s .25s cubic-bezier(.22,1,.36,1)">
+    <span class="hero-role-label">
+      <span id="typewriter"></span><span class="cursor-bar"></span>
+    </span>
+  </div>
+
+  <p class="hero-tagline" id="hero-tagline"
+     style="opacity:0;transform:translateY(16px);transition:opacity .7s .4s ease,transform .7s .4s cubic-bezier(.22,1,.36,1)">
+  </p>
+
+  <div class="hero-ctas" id="hero-ctas"
+       style="opacity:0;transform:translateY(14px);transition:opacity .7s .52s ease,transform .7s .52s cubic-bezier(.22,1,.36,1)">
+    <a href="#projects" class="btn btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Ver Proyectos
+    </a>
+    <a href="#contact" class="btn btn-outline">Contactar</a>
+  </div>
+
+  <div class="hero-socials" id="hero-socials" style="opacity:0;transition:opacity .7s .65s ease"></div>
+
+  <div class="hero-stats" id="hero-stats"
+       style="opacity:0;transform:translateY(20px);transition:opacity .7s .75s ease,transform .7s .75s cubic-bezier(.22,1,.36,1)">
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--dim)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Sobre mí</p>
+      <h2 class="section-heading">Quién hay detrás<br>del <em>código</em></h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- Col izquierda: bio + educación -->
+      <div>
+        <div class="reveal" id="about-bio"></div>
+        <div class="reveal">
+          <div class="philosophy-box">
+            <p class="philosophy-text" id="philosophy-quote"></p>
+          </div>
+        </div>
+
+        <div class="edu-list reveal">
+          <p class="label" style="margin-top:32px">Formación</p>
+          <div id="edu-list"></div>
+        </div>
+      </div>
+
+      <!-- Col derecha: skills -->
+      <div>
+        <div class="reveal">
+          <p class="skills-heading">Desarrollo</p>
+          <div id="skill-bars"></div>
+        </div>
+
+        <div class="reveal" style="margin-top:36px">
+          <p class="skills-heading">Ciberseguridad</p>
+          <div class="sec-tags" id="sec-tags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section id="projects">
+  <div class="container" style="padding-top:96px;padding-bottom:96px">
+    <div class="section-header reveal">
+      <div>
+        <p class="label">Proyectos</p>
+        <h2 class="section-heading">Lo que <em>construyo</em><br>y analizo</h2>
+        <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:420px">Cada proyecto documenta el proceso de razonamiento, no solo el resultado.</p>
+      </div>
+      <a data-link="github" target="_blank" rel="noopener" class="section-link">
+        Ver todos en GitHub
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ HTB ══════════ -->
+<section id="htb" class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">HackTheBox</p>
+      <h2 class="section-heading">Práctica <em>ofensiva</em><br>continua</h2>
+      <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:480px">
+        Formación técnica a través de HTB Academy y resolución de máquinas.
+        El lado ofensivo que complementa la arquitectura y la normativa.
+      </p>
+    </div>
+
+    <div class="htb-grid">
+      <!-- Rutas / Certs -->
+      <div class="reveal">
+        <p class="skills-heading" style="margin-bottom:24px">Rutas de Certificación</p>
+        <div id="htb-certs"></div>
+      </div>
+
+      <!-- Máquinas CTF -->
+      <div class="reveal">
+        <p class="skills-heading" style="margin-bottom:24px">Máquinas Resueltas</p>
+        <div class="card" style="overflow:hidden">
+          <table class="ctf-table">
+            <thead>
+              <tr>
+                <th>Máquina</th>
+                <th>Plataforma</th>
+                <th>Dificultad</th>
+                <th>OS</th>
+              </tr>
+            </thead>
+            <tbody id="machines-tbody"></tbody>
+          </table>
+        </div>
+        <div style="margin-top:16px;padding:14px 16px;border-radius:8px;background:var(--card);border:1px solid var(--border)">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim)">// Próximas máquinas en progreso — actualización continua</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ BLOG ══════════ -->
+<section id="blog">
+  <div class="container" style="padding-top:96px;padding-bottom:96px">
+    <div class="section-header reveal">
+      <div>
+        <p class="label">Blog</p>
+        <h2 class="section-heading">Escribo para<br><em>aprender</em> en voz alta</h2>
+        <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:420px">Análisis de seguridad, write-ups y notas del homelab. Siempre con el proceso, no solo la solución.</p>
+      </div>
+      <a id="blog-link" target="_blank" rel="noopener" class="section-link">
+        Ver blog completo
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 56px">
+      <p class="label" style="justify-content:center">Contacto</p>
+      <h2 class="section-heading">¿Hablamos<em>?</em></h2>
+      <p style="font-size:15px;color:var(--muted);margin-top:12px;line-height:1.7">
+        Disponible para posiciones en seguridad, desarrollo o perfil híbrido.
+        También para colaboraciones open-source y CTFs.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Columna izquierda -->
+      <div class="reveal">
+        <div class="avail-box">
+          <div class="avail-dot">
+            <div id="avail-dot-circle" style="width:7px;height:7px;border-radius:50%;animation:pulse 2s ease infinite"></div>
+            <span id="avail-label"></span>
+          </div>
+          <p class="avail-desc" id="avail-text"></p>
+        </div>
+
+        <a id="contact-email" class="contact-link">
+          <div class="contact-link-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d6ff3c" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <p class="contact-link-label">Email</p>
+            <p class="contact-link-value" id="contact-email-value"></p>
+          </div>
+        </a>
+
+        <a id="contact-linkedin" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#8b8fff"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <p class="contact-link-label">LinkedIn</p>
+            <p class="contact-link-value">Conectar profesionalmente</p>
+          </div>
+        </a>
+
+        <a id="contact-github" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--muted)"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-link-label">GitHub</p>
+            <p class="contact-link-value">Ver código y proyectos</p>
+          </div>
+        </a>
+
+        <div style="margin-top:16px;padding:12px 14px;border-radius:7px;background:rgba(255,255,255,.03);border:1px solid var(--border)">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim)">// Para comunicaciones sensibles, solicita mi clave PGP por email.</p>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="reveal">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Nombre *</label>
+              <input class="form-input" id="cf-name" name="name" type="text" required placeholder="Tu nombre"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email *</label>
+              <input class="form-input" id="cf-email" name="email" type="email" required placeholder="tu@empresa.com"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-subject">Asunto *</label>
+            <input class="form-input" id="cf-subject" name="subject" type="text" required placeholder="Oferta / Colaboración / Consulta"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-msg">Mensaje *</label>
+            <textarea class="form-input" id="cf-msg" name="message" required placeholder="Cuéntame sobre el proyecto o posición..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="cf-submit" style="width:100%;justify-content:center">
+            <svg id="cf-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span id="cf-text">Enviar Mensaje</span>
+          </button>
+          <div class="form-notice form-success" id="cf-success">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Mensaje recibido. Te respondo en menos de 24h.
+          </div>
+          <div class="form-notice form-error" id="cf-error">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Error al enviar. Intenta de nuevo o escríbeme directamente.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div id="footer">
+    <p class="footer-copy" id="footer-copy"></p>
+    <div class="footer-links">
+      <a data-footer-link="github"   target="_blank" rel="noopener">GitHub</a>
+      <a data-footer-link="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-footer-link="blog"     target="_blank" rel="noopener">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts: config primero, luego main -->
+<script src="data/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
