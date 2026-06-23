@@ -204,6 +204,13 @@ const CONFIG = {
       url:        "https://www.hackthebox.com/machines/Silentium",
     },
     {
+      name:       "Kobold",
+      platform:   "HackTheBox",
+      difficulty: "Easy",
+      os:         "Linux",
+      url:        "https://www.hackthebox.com/machines/Kobold",
+    },
+    {
       name:       "Injection",
       platform:   "DockerLabs",
       difficulty: "Easy",
